@@ -22,13 +22,15 @@ export default function App() {
         <NumResults movies={movies} />
       </Navbar>
       <Main>
-        <Box>
-          <MovieList movies={movies} />
-        </Box>
-        <Box>
-          <Summary watched={watched} />
-          <WatchedList watched={watched} />
-        </Box>
+        <Box element={<MovieList movies={movies} />} />
+        <Box
+          element={
+            <>
+              <Summary watched={watched} />
+              <WatchedList watched={watched} />
+            </>
+          }
+        />
       </Main>
     </>
   );
