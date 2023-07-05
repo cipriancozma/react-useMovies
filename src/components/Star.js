@@ -1,4 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+Star.propTypes = {
+  onClick: PropTypes.func,
+  full: PropTypes.bool,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  color: PropTypes.string,
+  size: PropTypes.number,
+};
 
 function Star({ onClick, full, onMouseEnter, onMouseLeave, color, size }) {
   const starStyle = {
@@ -44,12 +54,3 @@ function Star({ onClick, full, onMouseEnter, onMouseLeave, color, size }) {
 }
 
 export default Star;
-
-/*
-
-
-EMPTY STAR
-
-
-
-*/
